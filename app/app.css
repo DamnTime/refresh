@@ -1,0 +1,66 @@
+.main_box .slider-slide>img{
+  max-width:100%;
+}
+.main_box .row .col img{
+  max-width:100%;
+}
+
+.main_box .card .list .item{
+  height: 50px;
+}
+.main_box .card .list .item p{
+  float:left;
+}
+.main_box .card .list .item span{
+  float:right;
+}
+
+/*弹框的样式*/
+.modal{
+  width:60%;
+  min-height:80%;
+}
+.search_box{
+  background-color: #444;
+  width:100%;
+  height:100%;
+  position: absolute;
+  padding:10px;
+  box-shadow:20px 10px 40px #666;
+}
+/*动画效果*/
+.slide-in-left{
+  left:40%;
+  transition:all linear 400ms;
+}
+.slide-in-left.ng-enter{
+  left:100%;
+}
+.slide-in-left.ng-enter.ng-enter-active{
+  left:40%;
+}
+.slide-in-left.ng-leave{
+  left:40%;
+}
+.slide-in-left.ng-leave.ng-leave-active{
+  left:100%;
+}
+
+/*起始页效果*/
+.start_box{
+  width:100%;
+  height:100%;
+}
+.start_box>span{
+  float:left;
+  font-size:2em;
+  color:#f00;
+  margin:10px;
+}
+.start_box>button{
+  float:right;
+}
+.start_box>img{
+  max-width:100%;
+  margin-top:100px;
+}

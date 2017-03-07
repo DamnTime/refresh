@@ -1,0 +1,64 @@
+<div ng-include="'tpl/include/header.html'"></div>
+
+<ion-content class="has-header has-footer content main_box">
+  <!--轮播-->
+  <ion-slide-box auto-play="true" slide-interval="3000"
+    does-continue="true" page-shower="true">
+    <ion-slide ng-repeat="img in imgArray">
+      <img ng-src="{{img}}" alt=""/>
+    </ion-slide>
+  </ion-slide-box>
+
+  <!--三个图片-->
+  <div class="card">
+    <div class="item item-divider">
+      <a class="button icon-left ion-star button-clear button-dark" href="">净美仕产品</a>
+    </div>
+    <div class="item item-text-wrap">
+      <div class="row">
+        <div class="col">
+          <a href="#/list/1"><img src="images/01.jpg" alt=""/></a>
+        </div>
+        <div class="col">
+          <a href="#/list/1"><img src="images/02.jpg" alt=""/></a>
+        </div>
+        <div class="col">
+          <a href="#/list/1"><img src="images/03.jpg" alt=""/></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--关于信息-->
+  <div class="card">
+    <div class="item item-divider">
+      <a class="button icon-left ion-star button-clear button-dark" href="">关于净美仕</a>
+    </div>
+    <div class="item item-text-wrap">
+      <p>sdfsdfsdfdssdfdsfsdsdfdf</p>
+    </div>
+  </div>
+
+  <!--最新动态-->
+  <div class="card">
+    <div class="item item-divider">
+      <a class="button icon-left ion-star button-clear button-dark" href="">最新动态</a>
+    </div>
+    <div class="item item-text-wrap">
+      <ul class="list">
+        <li class="item" ng-repeat="news in newsData">
+          <p>{{news.title}}</p>
+          <span>{{news.pubTime | date:'yyyy-MM-dd'}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!--下拉-->
+    <ion-infinite-scroll ng-if="hasMore"
+                         distance="50%" on-infinite="loadMore()">
+    </ion-infinite-scroll>
+    <p ng-hide="hasMore">没有更多数据了</p>
+  </div>
+</ion-content>
+
+<div ng-include="'tpl/include/footer.html'"></div>

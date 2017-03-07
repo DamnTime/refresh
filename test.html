@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="css/ionic.css"/>
+  <script src="js/ionic.bundle.js"></script>
+  <style>
+    .bar.bar_calm.my_bg{background-color: pink;}
+  </style>
+</head>
+<body ng-controller="C1">
+  <!--显示一个header，有某种背景色，测试-->
+  <ion-header-bar class="bar-calm my_bg">
+    <h1 class="title">{{data}}</h1>
+  </ion-header-bar>
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <script>
+    angular.module('app',['ionic'])
+      .controller('C1',function($scope){
+
+
+        $scope.data = 1111;
+      });
+  </script>
+</body>
+</html>
